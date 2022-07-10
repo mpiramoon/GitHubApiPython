@@ -28,7 +28,7 @@ Run:
 
 # Using Program:
 
-For using this code, you need to know a name of the owner and a repository name for using this program. after providing these names, Run:
+For using this code, you need to know a name of the owner and a repository name. after providing these names, Run:
 
 ```
  python mp.py dbt-labs dbt-core
