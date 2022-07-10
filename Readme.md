@@ -41,5 +41,5 @@ If you want to check the private repository, you need to provide a token. [Creat
 After that you can access the private repository by running:
 
 ```
-python mp.py mpiramoon Trip -t=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
+python mp.py mpiramoon Trip -t=ghp_QJIng0jCgmAwV9cECLx1dhatTUREbV3F0KeB
 ```
