@@ -8,7 +8,10 @@ Run:
 
 ```
  pip install requests
- pip install pandas
+```
+
+```
+pip install pandas
 ```
 
 # Using Program:
@@ -28,3 +31,7 @@ After that you can access the private repository by running:
 ```
 python mp.py {Owner} {Repository} -t={Token}
 ```
+
+# Future improvements
+
+We can improve this code by getting the names of requests and fields that we want to show for different request.
