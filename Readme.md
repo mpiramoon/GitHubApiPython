@@ -1,6 +1,6 @@
 # Preparation
 
-First, you need to install **requests** on your python
+I developed this code on Python 3.10.4. If you want to use this code, you need to install **requests** and **pandas** on your python
 
 ## macOS and Linux
 
@@ -8,11 +8,12 @@ Run:
 
 ```
  pip install requests
+ pip install pandas
 ```
 
 # Using Program:
 
-For using this code, you need to know a name of the owner and a repository name. after providing these names, Run:
+For using this code, you need to know a name of the owner and a repository name. after providing these names, For example:
 
 ```
  python mp.py dbt-labs dbt-core
@@ -25,9 +26,5 @@ If you want to check the private repository, you need to provide a token. [Creat
 After that you can access the private repository by running:
 
 ```
-<<<<<<< HEAD
 python mp.py {Owner} {Repository} -t={Token}
-=======
-python mp.py mpiramoon Trip -t=ghp_QJIng0jCgmAwV9cECLx1dhatTUREbV3F0KeB
->>>>>>> 1f7db51 (Update Readme.md)
 ```
