@@ -52,17 +52,15 @@ def printDataFrame(dataprint):
 
 if __name__=='__main__':
    parser = argparse.ArgumentParser(description='Showing three latest releases and three most recent pull requests')
-   parser.add_argument("owner", type=str,help="Specify the project owner")
-   parser.add_argument("repo", type=str,help="Specify the repository name")
+   parser.add_argument("request",type=str,help="Enter pulls or releases")
+   parser.add_argument("--owner","-o", type=str,help="Specify the project owner",required=True)
+   parser.add_argument("--repo", "-r",type=str,help="Specify the repository name",required=True)
    parser.add_argument("--token","-t", type=str,help="Specify the Token if you want to access a private repository",default="",required=False)
    args = parser.parse_args()
    try:
-    rest,end=request(args.owner,args.repo,args.token,"pulls")
-    print(f"\n {end} most recent pull requests: \n")
+    rest,end=request(args.owner,args.repo,args.token,args.request)
+    print(f"\n {end} most recent {args.request}: \n")
     printDataFrame(rest)
-    restR,endR=request(args.owner,args.repo,args.token,"releases")
-    print(f"\n {endR} most recent releases: \n")
-    printDataFrame(restR)
    except Exception as ex:
     print(ex)
  

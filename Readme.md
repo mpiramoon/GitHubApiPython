@@ -12,10 +12,16 @@ pip install -r requirements.txt
 
 # Using Program:
 
-For using this code, you need to know a name of the owner and a repository name. after providing these names, For example:
+Provide the name of the owner and the repository name to list the pull-requests or releases. For example:
 
 ```
- python mp.py dbt-labs dbt-core
+ python mp.py pulls -o=dbt-labs -r=dbt-core
+```
+
+OR
+
+```
+ python mp.py releases -o=dbt-labs -r=dbt-core
 ```
 
 ## Private repository:
@@ -25,9 +31,11 @@ If you want to check the private repository, you need to provide a token. [Creat
 After that you can access the private repository by running:
 
 ```
-python mp.py {Owner} {Repository} -t={Token}
+python mp.py {pulls/releases} -o={owner} -r={Repository} -t={Token}
 ```
 
 # Future improvements
 
-The number of the final results and also the other columns can be defined as input in the program for other uses.
+- Add a flag to choose the number of the results returned
+
+- Allow the user to choose the information included in the output and its format
