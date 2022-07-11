@@ -1,4 +1,3 @@
-from distutils.command.install_data import install_data
 from distutils.core import setup
 
 setup (
