@@ -39,7 +39,7 @@ def request(owner,repo, token,request):
 
 
 
-def printFram(dataprint):
+def printDataFrame(dataprint):
     head=dataprint.columns.values.tolist()
 
     for ind in dataprint.index:
@@ -59,10 +59,10 @@ if __name__=='__main__':
    try:
     rest,end=request(args.owner,args.repo,args.token,"pulls")
     print(f"\n {end} most recent pull requests: \n")
-    printFram(rest)
+    printDataFrame(rest)
     restR,endR=request(args.owner,args.repo,args.token,"releases")
     print(f"\n {endR} most recent releases: \n")
-    printFram(restR)
+    printDataFrame(restR)
    except Exception as ex:
     print(ex)
  

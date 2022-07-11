@@ -1,17 +1,13 @@
 # Preparation
 
-I developed this code on Python 3.10.4. If you want to use this code, you need to install **requests** and **pandas** on your python
+I developed this code on Python 3.10.4. If you want to use this code, you need to install **requests** and **pandas** on your python.
 
 ## macOS and Linux
 
 Run:
 
 ```
- pip install requests
-```
-
-```
-pip install pandas
+pip install -r requirements.txt
 ```
 
 # Using Program:
@@ -34,4 +30,4 @@ python mp.py {Owner} {Repository} -t={Token}
 
 # Future improvements
 
-We can improve this code by getting fields that we want to show for different requests and the number of data that we want to illustrate.
+The number of the final results and also the other columns can be defined as input in the program for other uses.
