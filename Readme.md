@@ -34,4 +34,4 @@ python mp.py {Owner} {Repository} -t={Token}
 
 # Future improvements
 
-We can improve this code by getting the names of requests, fields that we want to show for different requests, and the number of data that we want to illustrate.
+We can improve this code by getting fields that we want to show for different requests and the number of data that we want to illustrate.
