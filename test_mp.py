@@ -7,8 +7,8 @@ from pandas.testing import assert_frame_equal
 class Testmp(unittest.TestCase):
     def test_successfulpullwithoutToken(self):
         result,end=mp.request("dbt-labs","dbt-core","","pulls")
-        data = {'title':['CT-808 more grant adapter tests', 'Proper internal representation', '[Draft] Adding dependency docs and requirements.txt'],
-        'number':[5452, 5451, 5450]}
+        data = {'title':['Bumping version to 1.2.0rc1', 'merge exclude columns for incremental models', 'Proper internal representation'],
+        'number':[5458, 5457, 5451]}
         df = pd.DataFrame(data)
         self.assertEqual(int(end),3)
         assert_frame_equal(result,df)
@@ -48,8 +48,8 @@ class Testmp(unittest.TestCase):
    
     def test_successfulPullsswithToken(self):
             token="validToken"
-            owner="validowner"
-            repo="validRepository"
+            owner="ValidOwner"
+            repo="ValidRepository"
             result,end=mp.request(owner,repo,token,"pulls")
             #data is a result of my private repository
             data = {'title':['EditDeletePage', 'HomePageBody', 'change home page'],
