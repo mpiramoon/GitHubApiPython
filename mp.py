@@ -69,9 +69,5 @@ if __name__=='__main__':
  
 
 
-
-
-   
-   #getpullrequestsandReleases(args.owner,args.repo,args.token)
   
 
