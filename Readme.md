@@ -2,23 +2,7 @@
 
 First, you need to install **requests** on your python
 
-## Windows
-
-open command prompt from the windows and run following command:
-
-```
- python -m pip install requests
-```
-
-## Linux
-
-Run:
-
-```
- pip install requests
-```
-
-## macOS
+## macOS and Linux
 
 Run:
 
@@ -41,5 +25,5 @@ If you want to check the private repository, you need to provide a token. [Creat
 After that you can access the private repository by running:
 
 ```
-python mp.py mpiramoon Trip -t=ghp_QJIng0jCgmAwV9cECLx1dhatTUREbV3F0KeB
+python mp.py {Owner} {Repository} -t={Token}
 ```

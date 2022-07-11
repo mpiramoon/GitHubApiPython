@@ -3,18 +3,19 @@ import argparse
 import requests
 
 
-def getpullrequests(owner, repo, token):
+def getpullrequestsandReleases(owner, repo, token):
     headers={}
     if(token!=""):
         headers = {'Authorization': f'token {token}'}
 
-    query_url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
+    query_url_pull = f"https://api.github.com/repos/{owner}/{repo}/pulls"
+    query_url_releases = f"https://api.github.com/repos/{owner}/{repo}/releases"
     params = {
         "state": "open",
     }
 
     try:
-        r = requests.get(query_url, headers=headers, params=params)
+        r = requests.get(query_url_pull, headers=headers, params=params)
         result =r.json()
         #Show error message if there is any message
         if 'message' in result:
@@ -34,23 +35,7 @@ def getpullrequests(owner, repo, token):
              res=f"title:'{rep['title']}', number:{rep['number']}"
              print(res)
 
-    except :
-         print("please check your parameters")
-
-
-
-def getreleases(owner, repo, token):
-    headers={}
-    if(token!=""):
-        headers = {'Authorization': f'token {token}'}
-
-    query_url = f"https://api.github.com/repos/{owner}/{repo}/releases"
-    params = {
-        "state": "open",
-    }
-
-    try:
-        r = requests.get(query_url, headers=headers, params=params)
+        r = requests.get(query_url_releases, headers=headers, params=params)
         result =r.json()
         #Show error message if there is any message
         if 'message' in result:
@@ -74,12 +59,16 @@ def getreleases(owner, repo, token):
          print("please check your parameters")
 
 
+   
+
+
+
 if __name__=='__main__':
    parser = argparse.ArgumentParser(description='Showing three latest releases and three most recent pull requests')
    parser.add_argument("owner", type=str,help="Specify the project owner")
    parser.add_argument("repo", type=str,help="Specify the repository name")
    parser.add_argument("--token","-t", type=str,help="Specify the Token if you want to access a private repository",default="",required=False)
    args = parser.parse_args()
-   getpullrequests(args.owner,args.repo,args.token)
-   getreleases(args.owner,args.repo,args.token)
+   getpullrequestsandReleases(args.owner,args.repo,args.token)
+  
 
