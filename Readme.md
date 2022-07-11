@@ -1,6 +1,6 @@
 # Preparation
 
-I developed this code on Python 3.10.4. If you want to use this code, you need to install **requests** and **pandas** on your python. You can easily inetall them by requirements.txt file.
+I developed this code on Python 3.10.4. If you want to use this code, you need to install **requests** and **pandas** on your python. You can easily install them by requirements.txt file.
 
 ## macOS and Linux
 
